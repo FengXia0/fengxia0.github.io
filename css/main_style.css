@@ -1,12 +1,12 @@
 /*媒体查询*/
 
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
     .sm_bg{
         height: 300px;
     }
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .sm_bg{
         height: 150px;
     }
