@@ -15,8 +15,8 @@ $(function(){
 
     var dots = {
         nb: 150,
-        distance: 50,
-        d_radius: 100,
+        distance: 0,
+        d_radius: 50,
         array: []
     };
 
