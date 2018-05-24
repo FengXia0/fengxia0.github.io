@@ -15,8 +15,8 @@ $(function(){
 
     var dots = {
         nb: 150,
-        distance: 0,
-        d_radius: 50,
+        distance: 50,
+        d_radius: 100,
         array: []
     };
 
@@ -108,7 +108,6 @@ $(function(){
                         ctx.strokeStyle = averageColorStyles(i_dot, j_dot);
                         ctx.moveTo(i_dot.x, i_dot.y);
                         ctx.lineTo(j_dot.x, j_dot.y);
-                        ctx.stroke();
                         ctx.closePath();
                     }
                 }
