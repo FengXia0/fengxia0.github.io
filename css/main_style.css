@@ -1,19 +1,74 @@
+/*滚动条*/
+::-webkit-scrollbar{width:7px;}
+::-webkit-scrollbar-track{background-color:#f1f1f1;}
+::-webkit-scrollbar-thumb{background-color:#DCDCD1;}
+::-webkit-scrollbar-thumb:hover {background-color:#DCDCD1;}
+::-webkit-scrollbar-thumb:active {background-color:#DCDCD1;}
+html{
+    font-size: 16px !important;
+    font-family: '微软雅黑 Light' !important;
+}
+
 /*媒体查询*/
-
-
 @media only screen and (max-device-width:480px) {
     .sm_bg{
-        height: 150px;
+        height: 9.375rem;
+    }
+    .sm_base_box{
+        height: 3.375rem;
+        margin-top: -1rem;
+    }
+    .sum_photo{
+        width: 3.375rem;
+        margin-right: 5px;
+    }
+    .sm_bg>h1{
+        line-height: 9.375rem;
+    }
+    #su_name{
+        font-size: .6rem;
+        top: 8px;
+    }
+    .xy{
+        font-size: .6rem;
+        top: 28px;
+    }
+    .sm_nav{
+        margin-top: 5px;
     }
 }
 
 @media only screen and (min-device-width: 992px) {
     .sm_bg{
-        height: 300px;
+        height: 18.75rem;
+    }
+    .sm_base_box{
+         height: 7rem;
+         margin-top: -2.2rem;
+    }
+    .sum_photo{
+        width: 7.5rem;
+        margin-right: 10px;
+    }
+    .sm_bg>h1{
+        line-height: 18.75rem;
+    }
+    #su_name{
+        font-size: 1.1rem;
+        top: 10px;
+    }
+    .xy{
+        font-size: 1.1rem;
+        top: 40px;
+    }
+    .sm_nav{
+        margin-top: 10px;
     }
 }
 
-
+body{
+    overflow: hidden;
+}
 
 #sm_main{
     width: 100%;
@@ -21,9 +76,63 @@
 }
 
 .sm_bg{
+    position: relative;
     width: 100%;
     background-color: #159957;
     background-image: linear-gradient(120deg,#155799,#159957);
     overflow: hidden;
     text-align: center;
+}
+
+.sm_bg>h1{
+    color: #ffffff;
+    text-align: center;
+}
+
+.sm_base_box{
+    position: relative;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0,0,0,.5);
+    -moz-box-shadow: 0 0 20px rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 20px rgba(0,0,0,.5);
+    border-radius: 5px;
+}
+
+.sum_photo{
+    display: inline-block;
+    height: 100%;
+    padding: 6px;
+}
+
+.sum_photo>img{
+    width: 100%;
+    height: 100%;box-shadow: 0 0 5px rgba(0,0,0,.5);
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,.5);
+    border-radius: 5px;
+}
+
+.sm_bth_nav{
+    float: right;
+}
+#su_name,.xy{
+    display: inline-block;
+    position: absolute;
+    font-weight: bold;
+    color: rgba(0,0,0,.65);
+}
+
+.xy{
+    font-weight: normal;
+}
+
+.xy>span{
+    position: relative;
+    top: 2px;
+    right: 4px;
+}
+
+.breadcrumb{
+    background-color: #ffffff !important;
 }

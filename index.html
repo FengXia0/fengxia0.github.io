@@ -1,42 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>SuMing</title>
     <!-- Bootstrap 核心 CSS -->
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main_style.css">
 
 </head>
 <body>
-    <div class="sm_warp">
-        <header id="sm_head">
-            <div class="container ">
+<div class="sm_warp">
+    <header id="sm_head">
+
+    </header>
+    <div id="sm_main">
+        <div class="sm_bg">
+            <h1>_HTML_</h1>
+        </div>
+        <!--===============photo====================-->
+        <div class="sm_main_ph">
+            <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <ul class="nav nav-pills">
-                            <li role="presentation"><a href="#">首页</a></li>
-                            <li role="presentation"><a href="#">前端资料</a></li>
-                            <li role="presentation"><a href="#">储存</a></li>
-                        </ul>
+                        <div class="sm_base_box">
+                            <div class="sum_photo">
+                                <img id="head_photo" v-bind:src="src">
+                            </div>
+                            <p id="su_name">{{message}}</p>
+                            <span class="xy"><span class="glyphicon glyphicon-map-marker"></span>ChengDu</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </header>
-        <div id="sm_main">
-            <div class="sm_bg">
-                <h1>HTML 开发中！</h1>
-            </div>
         </div>
-        <footer>
+        <!--===============menu====================-->
+        <div class="sm_nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ol class="breadcrumb">
+                            <li><a href="#">首页</a></li>
+                            <li><a href="#">前端资料</a></li>
+                            <li><a href="#">了解博主</a></li>
+                            <li><a href="#">个人中心</a></li>
+                            <li class="active">Data</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
 
-        </footer>
+        </div>
+        <canvas></canvas>
     </div>
+    <footer>
+
+    </footer>
+</div>
 <script src="script/jquery-3.3.1.min.js"></script>
 <!-- Bootstrap 核心 JavaScript -->
-<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="script/main.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 <script src="script/vue.js"></script>
+<script src="script/main.js"></script>
+<script>
+    $(function () {
+        vuJs();
+    });
+    /*vue*/
+    function vuJs() {
+        var photo = new Vue({
+            el: "#head_photo",
+            data: {
+                src: './image/dz.jpg'
+            }
+        });
+        var userName = new Vue({
+            el:"#su_name",
+            data:{
+                message:"苏铭"
+            }
+        });
+    }
+</script>
 </body>
 </html>
